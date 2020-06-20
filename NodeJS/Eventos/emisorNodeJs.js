@@ -1,9 +1,14 @@
 const { EventEmitter } = require('events')
+const { Save } = require('./nombres-eventos')
 
 const emitter = new EventEmitter()
 
-emitter.on('guardar', () => {
+emitter.on(Save, () => {
     console.log('Usando los emisores de NodeJs')
 })
 
-emitter.emit('guardar')
+emitter.emit(Save)
+
+/* 
+String magic
+*/
