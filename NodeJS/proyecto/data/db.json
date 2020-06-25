@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "id" : 1,
+        "titulo" : "Hellboy",
+        "genero" : "Fantasia",
+        "poster" : ""
+    },
+    {
+        "id" : 2,
+        "titulo" : "Avengers, End Game",
+        "genero" : "Ciencia Ficcion",
+        "poster" : ""
+    },
+    {
+        "id" : 3,
+        "titulo" : "La naranja Mecanica",
+        "genero" : "Drama",
+        "poster" : ""
+    }
+]

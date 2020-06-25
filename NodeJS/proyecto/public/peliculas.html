@@ -8,10 +8,67 @@
     
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar-brand">
+            Nuestra Pagina
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collpase navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="/peliculas.html" class="nav-link">Peliculas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="text-center">
+                    Agregar nueva pelicula
+                </h1>
+                
+                <div class="form-row justify-content-center">
+                    <div class="form-group mx-2">
+                        <label for="titulo">Titulo</label>
+                        <input type="text" id="titulo" placeholder="Ingrese el titulo" class="form-control">
+                    </div>
     
+                    <div class="form-group mx-2">
+                        <label for="genero">Genero</label>
+                        <input type="text" id="genero" placeholder="Ingrese el genero" class="form-control">
+                    </div>
+    
+                    <div class="form-group mx-2">
+                        <label for="poster">Poster</label>
+                        <input type="text" id="poster" placeholder="Ingrese la url del poster" class="form-control">
+                    </div>
+
+                    <button type="button" id="boton" class="btn btn-success">
+                        Agregar Pelicula
+                    </button>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <div class="row" id="peliculas">
+            
+        </div>
+    </div>
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
