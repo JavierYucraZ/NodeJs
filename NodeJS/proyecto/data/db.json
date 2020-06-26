@@ -3,18 +3,18 @@
         "id" : 1,
         "titulo" : "Hellboy",
         "genero" : "Fantasia",
-        "poster" : ""
+        "poster" : "https://es.web.img3.acsta.net/pictures/14/04/30/12/37/180077.jpg"
     },
     {
         "id" : 2,
         "titulo" : "Avengers, End Game",
         "genero" : "Ciencia Ficcion",
-        "poster" : ""
+        "poster" : "https://i.pinimg.com/originals/e4/37/de/e437dea06f53c9e61ab13d9c9eec2f46.jpg"
     },
     {
         "id" : 3,
         "titulo" : "La naranja Mecanica",
         "genero" : "Drama",
-        "poster" : ""
+        "poster" : "https://comoacaba.com/wp-content/uploads/2019/07/83WHIoQ2qKXmucDLWN4YEgFk8d7.jpg"
     }
 ]

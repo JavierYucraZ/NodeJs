@@ -20,3 +20,28 @@ window.onload = async function(){
     }
     document.querySelector('#peliculas').innerHTML += contenido
 }
+
+const boton = document.getElementById('boton')
+    
+function listener(){
+  boton.addEventListener('click', agregar)
+}
+listener()
+
+async function agregar(e){
+
+    const tituloInput = document.getElementById('titulo')
+    const generoInput = document.getElementById('genero')
+    const posterInput = document.getElementById('poster')
+
+    pelicula = {
+        titulo : tituloInput.value,
+        genero : generoInput.value,
+        poster : posterInput.value
+    }
+
+    await axios.post('/peliculas', pelicula)
+
+    alert('Pelicula agregada correctamente')
+    location.reload()
+}
