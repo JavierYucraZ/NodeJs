@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const { PORT } = require('./config')
 const mongoose = require('mongoose')
+const routes = require('./routes')
+const bodyParser = require('body-parser')
 
 mongoose.Promise = global.Promise
 
@@ -22,6 +24,12 @@ mongoose.connect('mongodb://localhost/nombredb',{
     */
     useFindAndModify : false
 })
+
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended : true}))
+
+app.use('/', routes())
 
 
 app.listen(PORT, () => {

@@ -28,19 +28,17 @@ function listener(){
 }
 listener()
 
-async function agregar(e){
+async function agregar(){
 
     const tituloInput = document.getElementById('titulo')
     const generoInput = document.getElementById('genero')
     const posterInput = document.getElementById('poster')
-
-    pelicula = {
+    
+    await axios.post('/peliculas', {
         titulo : tituloInput.value,
         genero : generoInput.value,
         poster : posterInput.value
-    }
-
-    await axios.post('/peliculas', pelicula)
+    })
 
     alert('Pelicula agregada correctamente')
     location.reload()

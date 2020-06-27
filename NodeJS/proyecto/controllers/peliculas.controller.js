@@ -21,13 +21,12 @@ class PeliculasController{
 		const { body : pelicula } = req
 		const ultimaPelicula = db[db.length -1]
 		const { id } = ultimaPelicula
-		console.log(pelicula)
-		// pelicula.id = id + 1
-		// db.push(pelicula)
-		// fs.writeFileSync(DB_PATH, JSON.stringify(db))
-		// return res.status(201).send()
+		
+		pelicula.id = id + 1
+		db.push(pelicula)
+		fs.writeFileSync(DB_PATH, JSON.stringify(db))
+		return res.status(201).send()
 	}
 }
 
 module.exports = new PeliculasController()
-
