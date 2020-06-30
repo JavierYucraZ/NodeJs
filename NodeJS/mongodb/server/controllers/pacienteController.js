@@ -1,8 +1,9 @@
-exports.nuevoCliente = (req, res) => {
+const Paciente = require('../models/paciente')
 
-    console.log(req.body)
-
+exports.nuevoCliente = async (req, res) => {
+    const paciente = new Paciente(req.body)
+    await paciente.save()
     res.json({
-        mensaje : 'Cliente agregado correctamente'
+        mensaje : 'El cliente se agrego correctamente'
     })
 }

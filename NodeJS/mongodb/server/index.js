@@ -4,10 +4,17 @@ const { PORT } = require('./config')
 const mongoose = require('mongoose')
 const routes = require('./routes')
 const bodyParser = require('body-parser')
+const path = require('path')
 
 mongoose.Promise = global.Promise
 
-mongoose.connect('mongodb://localhost/nombredb',{
+app.set('views', path.join(__dirname+'/views'))
+app.set('view engine', 'ejs')
+
+const uri = 'mongodb+srv://Javier:nodejseducomser@cluster0-2cab2.mongodb.net/veterinaria?retryWrites=true&w=majority'
+
+
+mongoose.connect(uri,{
     /*
         Es una herramienta para analizar cadenas de conexion
         en nuevas versiones
@@ -24,6 +31,8 @@ mongoose.connect('mongodb://localhost/nombredb',{
     */
     useFindAndModify : false
 })
+.then(console.log('Base de datos, conectada'))
+.catch(error => console.log(error))
 
 
 app.use(bodyParser.json())

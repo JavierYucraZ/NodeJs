@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de pacientes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+    <pre>
+        <%= listaPacientes %>
+    </pre>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="text-center">Agregar nuevo Paciente</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/agregar" method="POST">
+                            <div class="form-row">
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="nombre">Nombre de la mascota</label>
+                                        <input type="text" placeholder="Ingrese el nombre de la mascota" id="nombre" name="nombre" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="propietario">Nombre del propietario</label>
+                                        <input type="text" placeholder="Ingrese el nombre del propietario" id="propietario" name="propietario" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="fecha">Fecha de ingreso</label>
+                                        <input type="date" placeholder="Ingrese la fecha de ingreso" id="fecha" name="fecha" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="hora">Hora de ingreso</label>
+                                        <input type="text" placeholder="Ingrese la hora de ingreso" id="hora" name="hora" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="sintomas">Sintomas</label>
+                                    <textarea name="sintomas" id="sintomas" rows="3" class="form-control" placeholder="Ingrese los sintomas del paciente"></textarea>
+
+                                    <button class="btn btn-success mt-3" type="submit">
+                                        Registrar Paciente
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center">Lista de pacientes</h2>
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <th>Nombre</th>
+                        <th>Propietario</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Sintomas</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td>Propietario</td>
+                            <td>Fecha</td>
+                            <td>Hora</td>
+                            <td>Sintomas</td>
+                            <td>
+                                <a href="" class="btn btn-warning">Editar</a>
+                            </td>
+                            <td>
+                                <a href="" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
