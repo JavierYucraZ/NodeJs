@@ -46,8 +46,8 @@ app.listen(PORT, () => {
 })
 
 
-/* 
-
+/*
 docker build -t nombre_proyecto
 
+Portainer
 */
