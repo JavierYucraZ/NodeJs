@@ -4,10 +4,12 @@ const { HomeController } = require('../controllers')
 const { HomeRoutes } = require('../routes/index.routes')
 const Routes = require('../routes')
 const config = require('../config')
+const app = require('.')
 
 const container = createContainer()
 
 container.register({
+    app : asClass(app).singleton(),
     router : asFunction(Routes).singleton(),
     config : asValue(config)
 }).register({
@@ -18,6 +20,4 @@ container.register({
     HomeRoutes : asFunction(HomeRoutes).singleton()
 })
 
-module.exports = {
-    container
-}
+module.exports = container

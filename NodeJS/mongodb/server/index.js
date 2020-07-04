@@ -11,7 +11,7 @@ mongoose.Promise = global.Promise
 app.set('views', path.join(__dirname+'/views'))
 app.set('view engine', 'ejs')
 
-const uri = 'mongodb+srv://Javier:nodejseducomser@cluster0-2cab2.mongodb.net/veterinaria?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://Javier:mongoeducomser@cluster0-2cab2.mongodb.net/veterinaria?retryWrites=true&w=majority'
 
 
 mongoose.connect(uri,{
